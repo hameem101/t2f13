@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Greenfield Local Hub</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:arial;
+    background-color:#655029;
+    color:white;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:33px;
+}
+
+.title-box{
+    text-align:center;
+    flex:1;
+}
+
+.button{
+    text-align:center;
+}
+
+.button button{
+    background:#005C0E;
+    border:none;
+    color:white;
+    padding:15px 60px;
+    margin:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.search{
+    background:#005C0E;
+    padding:20px;
+    text-align:center;
+    font-size:18px;
+}
+
+.nav{
+    background:#005C0E;
+    padding:10px;
+    text-align:center;
+    font-size:18px;
+}
+
+.nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 5px;
+}
+
+.menu{
+    background:#005C0E;
+    padding:10px;
+    text-align:center;
+    margin:20px auto;
+    width:200px;
+}
+
+.description{
+    font-size:15px;
+    text-align:center;
+    margin:10px 20px;
+}
+
+.images{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    padding:20px;
+}
+
+.images img{
+    width:200px;
+    height:150px;
+    object-fit:cover;
+}
+
+section{
+    text-align:center;
+    margin:20px;
+}
+
+input{
+    padding:10px;
+    margin:10px;
+}
+
+.footer{
+    background:#005C0E;
+    padding:30px;
+    text-align:center;
+}
+
+.footer-columns{
+    display:flex;
+    justify-content:space-around;
+    margin-top:22px;
+}
+
+.footer-columns div{
+    width:30%;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+
+    <div class="title-box">
+        <h2>Greenfield Local Hub</h2>
+
+        <div class="button">
+            <button type="button">Menu Page</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- SEARCH -->
+<div class="search">
+    Search for
+</div>
+
+<!-- NAVIGATION -->
+<div class="nav">
+    <a href="homepage.html">Homepage</a> /
+    <a href="login.html">Login</a> /
+    <a href="order.html">Order</a> /
+    <a href="allergy advice.html">Allergy Advice</a> / 
+    <a href="support page.html">Support Page</a> /
+    <a href="menu.html">Menu</a> /
+    <a href="opening time.html">Opening Time</a> /
+    <a href="loyalty page.html">Loyalty Page</a>
+</div>
+
+<!-- MENU -->
+<div class="menu">
+    MENU
+</div>
+
+<!-- DESCRIPTION -->
+<div class="description">
+    We have a variety of different items on our menu.
+    Product categories include:
+    fresh produce (fruits, vegetables, herbs),
+    pantry staples (grains, pasta, canned goods),
+    dairy and eggs,
+    meat, poultry, seafood,
+    snacks and drinks,
+    organic products.
+</div>
+
+<div class="description">
+    PLEASE NOTE: Some products may contain allergens. Please check labels or speak to staff.
+</div>
+
+<!-- IMAGES -->
+<div class="images">
+    <img src="images/veg.webp" alt="Vegetables">
+    <img src="images/meat.JPG" alt="Meat">
+    <img src="images/eggs.JPG" alt="Eggs">
+    <img src="images/snacks.JPG" alt="Snacks">
+</div>
+
+<!-- PRODUCT SECTION -->
+<section>
+    <h2>Browse Products</h2>
+
+    <button id="loadProductsBtn">Load All Products</button>
+
+    <h3>Filter by Category</h3>
+    <input type="number" id="categoryIdInput" placeholder="Enter Category ID">
+    <button id="filterBtn">Filter</button>
+
+    <div id="productContainer"></div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+
+    <h3>Greenfield Local Hub</h3>
+
+    <p>Follow us on Twitter, Instagram and Facebook</p>
+    <p>Payment methods: credit cards, debit cards, cheque, cash</p>
+    <p>Terms and conditions, customer review policy, privacy centre, accessibility</p>
+
+    <div class="footer-columns">
+
+        <div>
+            <p>My orders</p>
+            <p>Store location</p>
+            <p>Help centre</p>
+        </div>
+
+        <div>
+            <p><b>Services</b></p>
+            <p>Click and collect</p>
+            <p>GLH rewards</p>
+            <p>Deliveries</p>
+        </div>
+
+        <div>
+            <p><b>Help centre</b></p>
+            <p>Contact us</p>
+            <p>How to shop</p>
+            <p>Product recalls</p>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

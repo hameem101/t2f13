@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Greenfield Local Hub</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: #655029;
+    color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 33px;
+}
+
+.header img {
+    width: 375px;
+    height: 220px;
+    object-fit: cover;
+}
+
+.title-box {
+    text-align: center;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.buttons button {
+    background: #005C0E;
+    border: none;
+    color: white;
+    padding: 15px 40px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search {
+    background: #005C0E;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.nav {
+    background: #005C0E;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.category-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.category-box {
+    background: #005C0E;
+    display: inline-block;
+    padding: 25px 40px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.about {
+    padding: 20px;
+    text-align: center;
+}
+
+.footer {
+    background: #005C0E;
+    padding: 35px;
+    text-align: center;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+
+.footer-columns div {
+    width: 30%;
+}
+
+.bottom {
+    margin-top: 20px;
+}
+
+input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 250px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <img src="images/home2.JPEG" alt="Shop image">
+</div>
+
+<div class="title-box">
+    <h1>Greenfield Local Hub</h1>
+</div>
+
+<!-- BUTTONS -->
+<div class="buttons">
+    <button type="button">Register</button>
+    <button type="button">Sign In</button>
+</div>
+
+<!-- REGISTER -->
+<section class="title-box">
+    <h2>Register</h2>
+
+    <input type="email" id="email" placeholder="Email address">
+    <input type="password" id="password" placeholder="Password">
+    <input type="text" id="fullName" placeholder="Full Name">
+    <input type="text" id="phoneNumber" placeholder="Phone number">
+    <input type="text" id="homeAddress" placeholder="Home address">
+
+    <button id="registerBtn">Register</button>
+</section>
+
+<!-- SIGN IN -->
+<section class="title-box">
+    <h2>Sign In</h2>
+
+    <input type="email" id="loginEmail" placeholder="Enter email address">
+    <input type="password" id="loginPassword" placeholder="Enter password">
+
+    <button id="signinBtn">Sign In</button>
+</section>
+
+<!-- IMAGE -->
+<div style="text-align:center;">
+    <img src="../images/h11.jpg" alt="Shop display" style="width:300px;">
+</div>
+
+<!-- SEARCH -->
+<div class="search">
+    Search for products here
+</div>
+
+<!-- NAVIGATION -->
+<div class="nav">
+    <a href="homepage.html">Homepage</a> /
+    <a href="login.html">Login</a> /
+    <a href="order.html">Order</a> /
+    <a href="allergy advice.html">Allergy Advice</a> /
+    <a href="support page.html">Support</a> /
+    <a href="menu.html">Menu</a> /
+    <a href="opening time.html">Opening Times</a> /
+    <a href="loyalty page.html">Loyalty</a>
+</div>
+
+<!-- CATEGORIES -->
+<div class="category-section">
+    <h3>Shop Our Categories</h3>
+
+    <div class="category-box">
+        Food and Drink
+    </div>
+</div>
+
+<!-- ABOUT US -->
+<div class="about">
+    <h3>About Us</h3>
+
+    <p>
+        We are a single-location retail outlet for locally produced food and drink,
+        offering collective marketing for local farmers and producers.
+    </p>
+
+    <p>
+        Our shop is known for fresh, high-quality food and drinks. We proudly serve
+        our community with seasonal fruit, vegetables, and essentials. We work closely
+        with farmers and suppliers to keep our shelves fresh and sustainable.
+    </p>
+
+    <p>
+        Unlike large supply chains, we focus on personal service and community values.
+        We aim to make every visit a great customer experience.
+    </p>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <h3>Greenfield Local Hub</h3>
+
+    <p>Follow us on Twitter, Instagram and Facebook</p>
+    <p>Payment methods: Credit cards, debit cards, cheque, cash</p>
+    <p>Terms & Conditions | Privacy | Accessibility</p>
+
+    <div class="footer-columns">
+        <div>
+            <p><b>Account</b></p>
+            <p>My Orders</p>
+            <p>Store Location</p>
+            <p>Help Centre</p>
+        </div>
+
+        <div>
+            <p><b>Services</b></p>
+            <p>Click and Collect</p>
+            <p>GLH Rewards</p>
+            <p>Deliveries</p>
+        </div>
+
+        <div>
+            <p><b>Help</b></p>
+            <p>Contact Us</p>
+            <p>How to Shop</p>
+            <p>Product Recalls</p>
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
