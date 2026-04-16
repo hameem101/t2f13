@@ -83,4 +83,97 @@ signinBtn.addEventListener("click", function () {
     });
 
 });
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+/* =====================================================
+    for GREENFIELD LOCAL HUB 
+===================================================== */
+
+
+/* =====================================================
+    GET ELEMENTS FROM YOUR HOMEPAGE
+===================================================== */
+
+
+//reference from html page
+const emailInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
+const fullNameInput = document.getElementById("fullName");
+const phoneInput = document.getElementById("phoneNumber");
+const addressInput = document.getElementById("homeAddress");
+
+// Buttons from html pages
+const registerBtn = document.getElementById("registerBtn");
+const signinBtn = document.getElementById("signinBtn");
+
+/* =====================================================
+   REGISTER CUSTOMER 
+===================================================== */
+//registering customers using add event listener for registering
+registerBtn.addEventListener("click", function () {
+// creating objects
+    const customerData = {
+        email: emailInput.value,
+        password: passwordInput.value,
+        full_name: fullNameInput.value,
+        phone_number: phoneInput.value,
+        home_address: addressInput.value
+    };
+
+// sending POST requests using backend to allow customers making accounts
+    fetch("http://127.0.0.1:8000/customers", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(customerData)
+    })
+    .then(res => res.json())
+    .then(data => {
+        alert("Registered successfully!");
+
+//once registering successful clear it to make the system clean
+        emailInput.value = "";
+        passwordInput.value = "";
+        fullNameInput.value = "";
+        phoneInput.value = "";
+        addressInput.value = "";
+    })
+    .catch(err => {
+//if theres a problem handle it using registstration failed
+        console.error(err);
+        alert("Registration failed");
+    });
+
+});
+
+// SIGN IN 
+
+// add event listener for sign in 
+signinBtn.addEventListener("click", function () {
+// collect details from login form and see if it would match when user registers
+    const loginData = {
+        email: document.getElementById("loginEmail").value,
+        password: document.getElementById("loginPassword").value
+    };
+// send login details to backend to analyse 
+    fetch("http://127.0.0.1:8000/login", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(loginData)
+    })
+    .then(res => res.json())
+    .then(data => {
+        alert(data.message);
+    })
+    .catch(err => {
+//handle errors that may occur 
+        console.error(err);
+        alert("Sign in failed");
+    });
+
+});
+
+
 
